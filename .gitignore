@@ -1,0 +1,58 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de IDE/editores
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Node.js (si usamos npm/webpack)
+/node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+package-lock.json
+
+# Composer
+/vendor/
+composer.lock
+
+# Archivos de compilación
+/public/css/*.min.css
+/public/js/*.min.js
+/public/js/*.bundle.js
+/dist/
+
+# Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos de WordPress que no deberían estar en tu plugin
+wp-config.php
+wp-content/
+
+# Archivos de caché
+.phpunit.result.cache
+/.phpcs.cache
+
+# Archivos de despliegue
+.ftpconfig
+.ftpignore
+sftp-config.json
+
+# Archivos generados durante el desarrollo
+/coverage/
+/logs/
+*.log
+*.zip
+*.tar.gz
+*.tgz
+
+# Archivos específicos de tu proyecto
+/test-results/
