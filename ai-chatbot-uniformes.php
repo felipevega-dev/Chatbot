@@ -4,8 +4,8 @@
  * Plugin URI: https://tudominio.com/plugins/ai-chatbot
  * Description: Chatbot inteligente con planes de suscripción para tiendas de uniformes escolares
  * Version: 1.0.0
- * Author: Tu Nombre
- * Author URI: https://tudominio.com
+ * Author: Felipe Vega
+ * Author URI: https://portfolio-felipevega.vercel.app/
  * Text Domain: ai-chatbot-uniformes
  * Domain Path: /languages
  * Requires at least: 5.8
@@ -150,17 +150,17 @@ function ai_chatbot_init() {
     load_plugin_textdomain('ai-chatbot-uniformes', false, dirname(plugin_basename(__FILE__)) . '/languages');
     
     // Inicializar el núcleo del plugin
-    $core = new AIChatbot\Chatbot_Core();
+    $core = new \AIChatbot\Chatbot_Core(); // Nota el backslash al principio
     $core->init();
     
     // Inicializar la parte administrativa
     if (is_admin()) {
-        $admin = new AIChatbot\Chatbot_Admin();
+        $admin = new \AIChatbot\Chatbot_Admin(); // Nota el backslash al principio
         $admin->init();
     }
     
     // Inicializar el frontend
-    $public = new AIChatbot\Public_Display();
+    $public = new \AIChatbot\Public_Display(); // Nota el backslash al principio
     $public->init();
 }
 add_action('plugins_loaded', 'ai_chatbot_init');
